@@ -1,10 +1,38 @@
+function reverseString(word) {
+  // create an array from the input string
+  const wordArray = word.split("");
+  // reverse the array
+  const reversedWordArray = wordArray.reverse();
+  // create a string from the reversed array
+  const reversedWord = reversedWordArray.join("");
+  // return the reversed string
+  return reversedWord;
+}
+
+// const { should } = require("chai")
+// const { reverse } = require("lodash")
+
+
 function isPalindrome(word) {
-  // Write your algorithm here
+  // reverse the input string
+  const reversedWord = reverseString(word);
+  // if the reversed string is the same as the input
+  if (word === reversedWord) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* 
   Add your pseudocode here
+  if the word is the same as the word in reverse, i should return true.reverse the input String
+  if the input is the same as the reversed input 
+    return true 
+  else
+    return false
 */
+  
 
 /*
   Add written explanation of your solution here
@@ -23,3 +51,9 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
+
+
+
+
+
